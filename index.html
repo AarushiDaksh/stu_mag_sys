@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System</h1>
+
+    <!-- Form for adding student data -->
+    <div class="form-container">
+      <h2>Add Student</h2>
+      <input type="text" id="name" placeholder="Enter Name" required />
+      <input type="number" id="rollNumber" placeholder="Enter Roll Number" required />
+      <input type="text" id="course" placeholder="Enter Course" required />
+      <input type="number" id="marks" placeholder="Enter Marks" required />
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <!-- Prediction Form -->
+    <h2>Predict Student Final Grade</h2>
+    <div class="predict-form">
+      <input type="number" id="math" placeholder="Math Marks" required />
+      <input type="number" id="english" placeholder="English Marks" required />
+      <input type="number" id="science" placeholder="Science Marks" required />
+      <button onclick="predictGrade()">Predict Grade</button>
+      <p id="predictedGrade">Predicted Grade: </p>
+    </div>
+
+    <!-- Student Table -->
+    <h2>Student List</h2>
+    <div class="stu_list">
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Student data will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Hidden video element for facial recognition -->
+  <video id="videoInput" style="display: none;" autoplay muted></video>
+
+  <!-- Load face-api.js library -->
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
