@@ -1,0 +1,1 @@
+# stu_mag_sys
